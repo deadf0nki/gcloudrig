@@ -391,6 +391,10 @@ Function Install-TightVNC {
   # & "c:\gcloudrig\downloads\dfmirage.exe" /verysilent /norestart | Out-Null
 }    
 
+Function Install-GST{
+
+}
+
 Function Install-Parsec {
   Write-Status "Installing Parsec..."
   Save-UrlToFile -URL "https://builds.parsecgaming.com/package/parsec-windows.exe" -File "c:\gcloudrig\downloads\parsec-windows.exe"
@@ -438,6 +442,7 @@ Function Install-SSH {
   Write-Status "Installing SSH..."
 
   Install-ChocolateyPackage OpenSSH -params '"/SSHServerFeature"' 
+  Install-ChocolateyPackage gstreamer
 
   # Set login shell as Powershell
   New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -PropertyType String -Force
