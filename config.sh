@@ -28,7 +28,7 @@ BOOTTYPE="pd-ssd"
 PREEMPTIBLE="true"
 
 # GCP Base Image and Family (replace these if you're using your own custom image - give it a family name and enter the Project ID)
-IMAGEBASEFAMILY="windows-2019"
+IMAGEBASEFAMILY="windows-2022"
 IMAGEBASEPROJECT="windows-cloud"
 
 # Various resource and label names
@@ -53,8 +53,8 @@ declare -A SETUPOPTIONS
 SETUPOPTIONS[ZeroTierNetwork]=""
 SETUPOPTIONS[VideoMode]="1920x1080"
 SETUPOPTIONS[DisplayScaling]=""
-SETUPOPTIONS[InstallSteam]="false"
-SETUPOPTIONS[InstallBattlenet]="false"
+SETUPOPTIONS[InstallSteam]="true"
+SETUPOPTIONS[InstallBattlenet]="true"
 SETUPOPTIONS[InstallSSH]="false"
-SETUPOPTIONS[InstallGoogleChrome]="false"
+SETUPOPTIONS[InstallGoogleChrome]="true"
 SETUPOPTIONS[InstallFirefox]="false"

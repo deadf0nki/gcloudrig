@@ -98,7 +98,7 @@ workflow Install-gCloudRig {
 
   InlineScript {
     Install-TightVNC
-    Install-Parsec
+    # Install-Parsec
     Install-OptionalSoftware $Using:Options
 
     New-GcloudrigShortcuts
