@@ -486,7 +486,7 @@ function gcloudrig_create_instance_template {
       --no-restart-on-failure \
       "$preemptibleFlags" \
       --format "value(name)" \
-      --enable-display-device
+      --enable-display-device \
       --metadata serial-port-logging-enable=true \
       --metadata-from-file windows-startup-script-ps1=<(cat "$DIR/gcloudrig-boot.ps1") \
       --quiet || echo
